@@ -30,7 +30,7 @@ include_once "ecwid_ajax_indexing.php";
 
         <?php 
             if (!empty($ecwid_canonical)) {
-                echo '<link rel="canonical" href="' . $ecwid_canonical . '"></meta>';
+                echo '<link rel="canonical" href="' . $ecwid_canonical . '" />';
             }
         ?>
 
