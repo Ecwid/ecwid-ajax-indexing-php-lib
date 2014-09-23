@@ -22,6 +22,14 @@ if (isset($_GET['_escaped_fragment_'])) {
             $ecwid_canonical   = $catalog->get_category_url($params['id']);
         }
 
+        $ecwid_html_index .= <<<HTML
+<script type="text/javascript"> 
+if (!document.location.hash) {
+  document.location.hash = '!$_GET[_escaped_fragment_]';
+}
+</script>
+HTML;
+
         $ecwid_description = ecwid_prepare_meta_description($ecwid_description);
     } else {
         $ecwid_html_index = $catalog->get_category(0);
