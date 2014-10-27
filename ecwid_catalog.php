@@ -82,7 +82,7 @@ class EcwidCatalog
 						if (isset($attribute['internalName']) && $attribute['internalName'] == 'Brand') {
 							$attr_string .= '<span itemprop="brand">' . EcwidPlatform::esc_html($attribute['value']) . '</span>';
 						} else {
-							$attr_string .= $attribute['value'];
+							$attr_string .= EcwidPlatform::esc_html($attribute['value']);
 						}
 
 						$return .= $this->_l($attr_string);
